@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+$red: #E87D6C;
+$red1: #D55F4C;
+$naranja: #F9A050;
+$naranja1: #F08940;
+$cream0: #F0EDDE;
+$cream1: #DEDBCA;
+$white1: #FAFAFA;
+$black0: #665F5B;
+$black1: #585451;
+$black2: #504B4A;
+
+// ELEMENTOS
+body{
+  font-family: 'Quicksand', sans-serif;
+  p{
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+#plus ul{
+  li{
+    list-style: inherit;
+    line-height: 32px;
+    position: relative;
+    &:after{
+      position: absolute;
+      left: -32px;
+      top: 3px;
+      content:'';
+      width: 26px;
+      height: 26px;
+      background: url("http://emojione.com/wp-content/uploads/assets/emojis/2705.svg");
+    }
+  }
+}
+#datosP{
+  span{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 8px;
+  }
+  @media only screen and (max-width: 765px){
+    .sm div{
+      display: block;
+      width: 250px !important;
+      margin: 0 auto !important;
+    }
+  }
+  @media only screen and (min-width: 615px){
+    .sm{
+      width: 520px !important;
+      margin: 0 auto !important;
+      padding: 0;
+      div{
+        display: inline-block;
+      }
+    }
+  }
+  @media only screen and (min-width: 992px){
+    .sm{
+      width: auto !important;
+      div{
+        display: block;
+        width: 250px !important;
+        margin: 0 auto !important;
+      }
+    }
+    .forzar-sm{
+        width: 520px !important;
+        margin: 0 auto !important;
+        padding: 0;
+        div{
+          display: inline-block !important;
+        }
+      }
+  }
+}
+.navbar{
+  border-bottom: 5px $naranja1 solid;
+  a{
+    transition: all .5s;
+    color: $cream0 !important;
+  }
+  a:hover{
+    background-color: $black2 !important;
+  }
+  .open > a{
+    background-color: $red !important;
+    border-bottom: 5px $red1 solid;
+    margin-bottom: -5px;
+    &:hover{
+      background-color: $red1 !important;
+      border-color: $red1;
+    }
+  }
+  .dropdown-menu{
+    background-color: $black1 !important;
+  }
+  button.navbar-toggle{
+    background-color: $red !important;
+    border: none;
+    .icon-bar{
+      background-color: $white1;
+    }
+  }
+}
+#habilidades ul.nav.nav-pills{
+  border-bottom: 3px dotted $red;
+  a{
+    padding: 5px;
+  }
+  li.active a{
+    transition: all .5s;
+    color: $white1;
+    background-color: $naranja;
+    box-shadow: 0 4px 0 $naranja, 0 -2px 8px rgba(0,0,0,0.3);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  li{
+    a[aria-expanded="false"]{
+      transition: all .3s;
+      color: $black0;
+      &:hover{
+        background-color: $cream1;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0 3px 0 $red;
+      }
+    }
+  }
+}
+#myTabContent{
+  #frontend, #backend, #serversDB, #plus {
+    div div{
+      margin-bottom: 20px;
+      vertical-align: top;
+    }
+  }
+}
+.pic{
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+  background-image: url("https://avatars1.githubusercontent.com/u/20975786?v=3&s=460");
+  background-size: cover;
+  border-radius: 50%;
+}
+#logo{
+  width: 100%;
+  height: 50px;
+  background-image: url(asset_path("logo.png"));
+  background-repeat: no-repeat;
+}
+
+//***************************************************************************//
+
+// BACKGOUNDS COLOURS
+.bg-red{
+  background-color: $red;
+}
+.bg-cream0{
+  background-color: $cream0;
+}
+.bg-cream1{
+  background-color: $cream1;
+}
+.bg-white1{
+  background-color: $white1;
+}
+.bg-black0{
+  background-color: $black0;
+}
+.bg-red{
+  background-color: $red;
+}
+.bg-red1{
+  background-color: $red1;
+}
+.bg-naranja{
+  background-color: $naranja;
+}
+.bg-naranja1{
+  background-color: $naranja1;
+}
+
+
+// TEXT COLOURS
+.text-white{
+  color: $white1;
+}
+.text-cream0{
+  color: $cream0;
+}
+.text-red{
+  color: $red;
+}
+.text-red1{
+  color: $red1;
+}
+.text-naranja{
+  color: $naranja;
+}
+.text-naranja1{
+  color: $naranja1;
+}
+.text-black2{
+  color: $black2;
+}
+
+
+// TEXT SIZES
+.text-normal{
+  font-size: 1em;
+}
+.text-medium{
+  font-size: 1.2em;
+}
+.text-big{
+  font-size: 1.5em;
+}
+.light{
+  font-weight: 300;
+}
+.regular{
+  font-weight: 400;
+}
+.medium{
+  font-weight: 500;
+}
+.bold{
+  font-weight: 700;
+}
+
+// PADDINGS
+.no-padding{
+  padding: 0;
+}
+.padding{
+  padding: 5px;
+}
+.extra-small-padding{
+  padding: 10px;
+}
+.small-padding{
+  padding: 15px;
+}
+.medium-padding{
+  padding: 20px;
+}
+.padding-top{
+  padding-top: 1em;
+}
+.padding-top-extra-small{
+  padding-top: 2em;
+}
+.padding-top-small{
+  padding-top: 3em;
+}
+.padding-top-medium{
+  padding-top: 4em;
+}
+.padding-top-big{
+  padding-top: 5em;
+}
+.padding-right{
+  padding-right: 1em;
+}
+.padding-bottom{
+  padding-bottom: 1em;
+}
+.padding-left{
+  padding-left: 1em;
+}
+
+
+// MARGINGS
+.no-margin{
+  margin: 0;
+}
+.margin-top{
+  margin-top: 10px;
+}
+.margin-right{
+  margin-right: 10px;
+}
+.margin-bottom{
+  margin-bottom: 10px;
+}
+.margin-bottom-big{
+  margin-bottom: 30px;
+}
+.margin-bottom-super-big{
+  margin-bottom: 40px;
+}
+.margin-left{
+  margin-left: 10px;
+}
+
+
+// SHADOWS
+.shadow-right{
+  box-shadow: 3px 0px 10px rgba(0,0,0,.2);
+}
+.shadow-bottom{
+  box-shadow: 0px 3px 10px rgba(0,0,0,.2);
+}
+
+// BORDERS
+.border-right{
+  border-right: 5px $red solid;
+}
+
+
+// CURSORS
+.cursor-pointer{
+  cursor: pointer;
+}
+
+
+// BLOCK TEXT
+.word-wrap{
+  word-wrap: break-word;
+}
+
+// BLOCKS
+.inline-block{
+  float: none !important;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -2px;
+  margin-left: -2px;
+}
+.no-float{
+  float: none;
+}
+.fixed{
+  position: fixed;
+  overflow: auto;
+}
+.circle{
+  border-radius: 50%;
+}
+.center-block{
+  margin: 0 auto;
+}
+.total-height{
+  height: 90%;
+}
+.relleno-side{
+  height: 1000px;
+}
+
+
+// VERTICALS
+.vertical-top{
+  vertical-align: top;
+}
+.vertical-bottom{
+  vertical-align: bottom;
+}
+.vertical-middle{
+  vertical-align: middle;
+}

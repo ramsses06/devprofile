@@ -1,0 +1,28 @@
+%article#habilidades.medium-padding.margin-top
+  %ul.nav.nav-pills.nav-justified
+    %li.active
+      %a.bold.text-big{"aria-expanded" => "true", "data-toggle" => "tab", :href => "#backend"}
+        Backend
+    %li
+      %a.bold.text-big{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#frontend"}
+        Frontend
+    %li
+      %a.bold.text-big{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#serversDB"}
+        Servers & DB
+    %li
+      %a.bold.text-big{"aria-expanded" => "false", "data-toggle" => "tab", :href => "#plus"}
+        Plus
+
+  #myTabContent.tab-content.text-medium.regular.padding-top
+
+    #backend.tab-pane.fade.active.in
+      = render "backend"
+
+    #frontend.tab-pane.fade
+      = render "frontend"
+
+    #serversDB.tab-pane.fade
+      = render "serversDB"
+
+    #plus.tab-pane.fade
+      = render "plus"

@@ -1,0 +1,29 @@
+.navbar.navbar-default.navbar-fixed-top.no-margin.bg-black0
+  .container.col-md-4.hidden-xs.hidden-sm.no-padding
+    %div#logo
+
+  .container.col-md-8.col-xs-12.col-sm-12
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#navbar-main", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+    #navbar-main.navbar-collapse.collapse
+      %ul.nav.navbar-nav.text-normal
+
+        %li{:class => "#{'open' if request.path==root_path}"}
+          %a.text-medium{:href => "#{root_path}"}
+            %span.glyphicon.glyphicon-star
+            Acerca de mí
+
+        %li{:class => "#{'open' if request.path==habilidades_path}"}
+          %a.text-medium{:href => "#{habilidades_path}"}
+            %span.glyphicon.glyphicon-education
+            Habilidades
+
+        - if mobile_device?
+          %li{:class => "#{'open' if request.path==datos_personales_path}"}
+            %a.text-medium{:href => "/datos-personales"}
+              %span.glyphicon.glyphicon-user
+              Datos Personales

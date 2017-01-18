@@ -1,0 +1,62 @@
+@import "global.scss";
+
+.icon{
+  transition: all .5s;
+  padding: 20px;
+  background-color: $black1;
+  margin: 0 auto;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  &:hover{
+    margin-top: -10px;
+    margin-bottom: 30px !important;
+    &::after{
+      width: 80px;
+      background-color: $red;
+      left: 20px;
+      bottom: -20px;
+    }
+  }
+  &::after{
+    transition: all .2s;
+    content: "";
+    width: 0px;
+    height: 3px;
+    position: absolute;
+    background-color: transparent;
+    left: 50%;
+    bottom: 0px;
+  }
+}
+
+.devicon{
+  color: $white1;
+  width: 80px;
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 400px){
+  .icon{
+    padding: 15px;
+    background-color: $black1;
+    width: 90px;
+    height: 90px;
+    &:hover{
+      &::after{
+        width: 70px;
+        left: 10px;
+      }
+    }
+    &::after{
+      left: 50%;
+      bottom: 0px;
+    }
+  }
+  .devicon{
+    width: 60px;
+    font-size: 60px;
+  }
+}
