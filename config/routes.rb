@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get '/datos-personales', to: "home#contacto", as: :datos_personales
-  get '/habilidades', to: "home#habilidades", as: :habilidades
+  get '/conocimientos', to: "home#habilidades", as: :habilidades
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
